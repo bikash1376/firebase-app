@@ -8,7 +8,8 @@ const firebaseConfig = {
   storageBucket: "mern-first-dfab7.appspot.com",
   messagingSenderId: "197468351345",
   appId: "1:197468351345:web:682acff085d00b95abe4d0",
-  measurementId: "G-M15Z1ZYTMX"
+  measurementId: "G-M15Z1ZYTMX",
+  databaseURL : "https://mern-first-dfab7-default-rtdb.firebaseio.com"
 };
 
 export const app = initializeApp(firebaseConfig);

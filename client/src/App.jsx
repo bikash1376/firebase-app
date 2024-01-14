@@ -1,13 +1,23 @@
 
+import './App.css';
+import {RouterProvider, createBrowserRouter} from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import AddStudent from './components/AddStudent';
+import StudentList from './components/StudentList'
 
-import './App.css'
-import AddData from './components/AddData'
-
+const myRouter = createBrowserRouter([
+  {path:'', Component:Dashboard,children:[
+    {path:'', Component:StudentList},
+    {path:'addStudent', Component:AddStudent},
+    {path:'studentList', Component:StudentList}
+  ]}
+])
 function App() {
+
 
   return (
     <>
-      <AddData/>
+      <RouterProvider router={myRouter}/>
     </>
   )
 }
